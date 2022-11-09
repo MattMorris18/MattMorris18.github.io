@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investing Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Investing Simulator</h1>
+
+<ul id="navbar">
+
+    <li><a href="./Portfolio.html" class="active">Portfolio</a></li>
+    <li><a href="./Trade.html" class="">Trade</a></li>
+    <li><a href="./Research.html" class="">Research</a></li>
+
+</ul>
+<hr id="navBarUnderline">
+
+
+<div class="pageContainers" id="portfolioContainer">
+
+    <div class="infoText">Portfolio Overview</div>
+    
+        <div class="infoDivs" id="portfolioOverview">
+            <div id="portfolioAccountValue" class="portfolioOverviewDivs">Account Value: <br><span id="accountValue">$100,000.00</span></div>
+            <div id="totalReturnDiv" class="portfolioOverviewDivs">Total Return: <br><span id="portfolioTotalReturn">+ 2.5%</span></div>
+            <div id="returnPercentageDiv" class="portfolioOverviewDivs">Return%: <br><span id="portfolioReturnPercentage"></span></div>
+            <div id="portfolioCash" class="portfolioOverviewDivs">Cash: <br><span id="cashValue">$100,000.00</span></div>           
+
+        </div>
+    
+    <div class="infoText">Portfolio Performance</div>
+
+        <div class="infoDivs" id="portfolioPerformanceDiv">
+            <div id="chartSelector">
+                <div id="lineChartBtn" class="PerformanceOptions">Performance</div>
+                <div id="pieChartBtn" class="PerformanceOptions">Holdings by %</div>
+            </div>
+
+            
+    
+            <div id="chartContainer">
+                <canvas id="portfolioHoldingsChart"></canvas>  
+                <canvas id="portfolioPerformanceChart"></canvas>  
+            </div>
+
+        </div>
+
+    <div class="infoText">Holdings <button id="refreshHoldingsBtn">Refresh</button></div> 
+    
+        <div class="infoDivs" id="holdings">
+
+            <table id="holdingsTable">
+                <tr>
+                    <th>Symbol</th>
+                    <th>Description</th>
+                    <th>Quantity</th>
+                    <th>Avg. Purchase Price</th>
+                    <th>Initial Position</th>
+                    <th>Current Price</th>
+                    <th>Total Value</th>
+                    <th>Gain / Loss</th>
+                    <th>GL %</th>
+                </tr>   
+            </table>
+
+        </div>
+
+</div>
+
+<div id="tradeHistoryBtn">Trade History</div>
+
+<div id="overlay">
+    <div id="tradeHistoryWindow">
+        <table id="transactionsTable">
+            <tr>
+                <th>Buy / Sell</th>
+                <th>Symbol</th>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total Value</th>
+                <th>Date</th>
+                <th>Time</th>
+            </tr> 
+        </table>
+    </div>
+</div>
+    
+<button id="deleteLocalStorage">Delete LocalStorage</button>
+   
+
+<script src="./portfolioApp.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

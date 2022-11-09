@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investing Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Investing Simulator</h1>
+
+<ul id="navbar">
+
+    <li><a href="./Portfolio.html" class="active">Portfolio</a></li>
+    <li><a href="./Trade.html" class="">Trade</a></li>
+    <li><a href="./Research.html" class="">Research</a></li>
+
+</ul>
+<hr id="navBarUnderline">
+
+    <div id="tradeAccountValue" class="tradeOverviewDivs">Account Value: <br> <span id="accountValue">$100,000.00</span></div>
+
+    <div id="tradeCash" class="tradeOverviewDivs">Cash: <br> <span id="cashValue">$100,000.00</span></div>
+
+
+<div class= "pageContainers" id="tradeContainer">
+
+    <div class="infoDivs" id="transactionContainer">
+        
+        <input type="text" id="tickerSearchInput" placeholder="Search for a Symbol..."> <button id="tickerSearchButton">Search</button>
+        <div id="tickerSearchDropdown"></div>
+        <br>
+        <div id="tickerSelectionPreview"></div>
+        <br>
+        <select name="buy-sell" id="buySellSelector" class="secondLineInputs">
+            <option value="Buy / Sell" disabled selected>Buy / Sell</option>
+            <option value="Buy">Buy</option>
+            <option value="Sell">Sell</option>
+        </select>
+        <input type="text" class="secondLineInputs" placeholder="Quantity" id="quantityInput">
+        <p id="tradeErrorMessage"></p>
+
+        <div id="tradeEnterBtn">Enter</div>
+
+    </div>
+
+    <div class="infoDivs" id="orderPreview">
+        <div id="orderPreviewHeader">Order Preview: <span id="buySellPreview"></span></div>
+        <div class="orderPreviewDetails">Ticker Symbol: <br><span id="tickerOrderPreview"></span></div>
+        <div class="orderPreviewDetails">Quantity: <br><span id="orderPreviewQuantity"></span> </div>
+        <div class="orderPreviewDetails">Price Per Share: <br><span id="orderPreviewPrice"></span></div>
+        <div class="orderPreviewDetails">Total Price: <br><span id="orderPreviewTotal"></span> </div>
+    
+        <button id="placeOrderButton">Place Order</button>
+        <p id="placeOrderErrorMsg"></p>
+        <div id="confirmationPopUp">
+            <div id="noConfirmationButton" class="confirmationBtns">No</div>
+            <div id="yesConfirmationButton" class="confirmationBtns">Yes</div>
+        </div>
+    </div>
+
+</div>
+
+    <script src="./tradeApp.js"></script>
+</body>
+</html>

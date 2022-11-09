@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investing Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Investing Simulator</h1>
+
+<ul id="navbar">
+
+    <li><a href="./Portfolio.html" class="active">Portfolio</a></li>
+    <li><a href="./Trade.html" class="">Trade</a></li>
+    <li><a href="./Research.html" class="">Research</a></li>
+
+</ul>
+
+<div class="infoDivs" id="researchContainer">
+   <div id="tickerSearch">
+        <input type="text" id="researchTickerSearchInput" placeholder="Search for a Symbol..."> <button id="researchTickerSearchButton">Search</button>
+        <div id="researchTickerSearchDropdown"></div>
+        <br>
+        <br>
+        <div id="researchTickerSelectionPreview"></div>
+   </div>
+
+   <div id="stockInfo">
+        <div id="infoButtonsContainer"><div class="stockInfoButtons" id="basicInfoBtn">Basic Info</div><div class="stockInfoButtons" id="advancedInfoBtn">Advanced Info</div></div>
+        <div class= "stockFinancialInfoBoxes" id="basicInfoContainer">
+            <div id="currentPrice" title="Current price of this stock">Price: </div>
+            <div id="space"></div>
+            <div id="openPrice" title="Price this stock last opened at">Open: </div>
+            <div id="closingPrice" title="Price this stock last closed at">Close: </div>
+            <div id="fiftyTwoWeekHigh" title="The highest price of this stock in the last 52 weeks">52 Week High: </div>
+            <div id="fiftyTwoWeekLow" title="The lowest price of this stock in the last 52 weeks">52 Week Low: </div>
+            <div id="avgVolume" title="The average amount of trades of the stock in the last 5 days">Avg Daily Volume: </div>
+            <div id="mktCap" title="The implied value of the company based on the price of the stock">Market Cap: </div>
+            <div id="divYield" title="The dividend payout rate as a percentage of the stock price">Dividend Yield: </div>
+            <div id="PERatio" title="A common ratio used to value a company based on it's current share price relative to the company's earnings per share.">PE Ratio: </div>
+        </div>
+        <div class= "stockFinancialInfoBoxes" id="advancedInfoContainer">
+            <div id="industry">Industry: </div>
+            <div id="employees">Employees: </div>
+            <div id="revenue" title="Total amount of sales ($) of the company">Total Revenue: </div>
+            <div id="profit" title="Gross Profit is the total sales (revenue) of a company minus the cost of goods sold (often referred to as COGS)">Gross Profit: </div>
+            <div id="margin" title="Gross Margin is calculated by dividing the gross profit by the total revenue, and indicates the percentage of money made on revenue after expenses.">Gross Margin: </div>
+            <div id="ebitda" title="Earnings before interest, taxes, depreciation, and amortization, is an alternate measure of profitability to net income">EBITDA: </div>
+            <div id="quickRatio" title="Also known as the liquidity ratio, this measures the ability of a business to pay off short term liabilities by having high-liquid assets that can be used (if necessary) to pay them. Typically a quick ratio over 1 indicates the ability to pay off short term liabilities.">Quick Ratio: </div>
+            <div id="currentRatio" title="This ratio indicates a company's ability to pay off any obligations or liabilities, typically due within one year. This measures a company's liquidity and ability to pay short term debt. Typically a current ratio over 1 indicates the ability to pay off these short term debts">Current Ratio: </div>
+            <div id="returnOnAssets" title="The ROA is indicative of how efficient a company is at using its assets to generate profit. Generally an ROA above 5% is considered good, but should be considered against companies in a similar sector for a better comparison.">Return on Assets (ROA): </div>
+            <div id="returnOnEquity" title="The ROE value is used to gauge the efficiency of a company's ability to generate returns based on shareholder's investment. This should also be compared to companies in a similar sector to determine how the company is performing vs competitors.">Return on Equity (ROE): </div>
+        </div>            
+   </div>
+   
+   <div id="companyProfileContainer"><span>Company Summary:</span><br>
+
+    <p id="companySummary"></p>
+   </div>
+
+   <div id="newsContainer">
+        <div id="newsTitle">Stock News: </div>
+            <div id="newsOne" class="newsBodyContainers">
+                <div class="newsDates" id="dateOne"></div>
+                <div><a href="" target="_blank" id="newsOneTitle"></a></div>
+                <p id="newsOneDescription"></p>
+            </div>
+            <div id="newsTwo" class="newsBodyContainers">
+                <div id="dateTwo" class="newsDates"></div>
+                <div><a href="" target="_blank" id="newsTwoTitle"></a></div>
+                <p id="newsTwoDescription"></p>
+            </div>
+            <div id="newsThree" class="newsBodyContainers">
+                <div id="dateThree" class="newsDates"></div>
+                <div><a href="" target="_blank" id="newsThreeTitle"></a></div>
+                <p id="newsThreeDescription"></p>
+            </div>
+   </div>
+
+</div>
+    
+
+
+
+    <script src="./researchApp.js"></script>
+</body>
+</html>
